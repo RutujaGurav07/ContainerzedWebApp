@@ -1,0 +1,13 @@
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  server: {
+    host: '0.0.0.0', // Allows external access
+    port: 5173, // Keeps the same port
+    strictPort: true, // Ensures the port is used
+    watch: {
+      usePolling: true, // Helps with file changes inside Docker
+    },
+  },
+});
